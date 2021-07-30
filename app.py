@@ -46,6 +46,7 @@ ghost_posts = requests.get(
 posts = ghost_posts.json()["posts"]
 for post in posts:
     links.append(post["url"])
+    links.append(post["url"] + "amp")
 
 for link in links:
     print(link)
