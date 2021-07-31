@@ -27,7 +27,7 @@ Install as cron and pipe output to sitemap.txt
 #!/bin/bash
 cd /<location-of>/sitemap-generator
 . venv/bin/activate
-python app.py <ghost-api-key> /<destination>/sitemap.txt
+python app.py <ghost-api-key> > /<destination>/sitemap.txt
 
 # Ping google to let them know things might have been added
 # See https://developers.google.com/search/docs/advanced/sitemaps/build-sitemap#addsitemap
