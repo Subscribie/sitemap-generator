@@ -15,7 +15,7 @@ Usage:
 links = []
 
 wordpress_pages = requests.get(
-    "https://subscriptionwebsitebuilder.co.uk/p/wp-json/wp/v2/pages"
+    "https://subscribie.co.uk/p/wp-json/wp/v2/pages"
 )
 
 pages = wordpress_pages.json()
@@ -24,7 +24,7 @@ for page in pages:
 
 
 worpress_posts = requests.get(
-    "https://subscriptionwebsitebuilder.co.uk/p/wp-json/wp/v2/posts"
+    "https://subscribie.co.uk/p/wp-json/wp/v2/posts"
 )
 
 posts = worpress_posts.json()
@@ -32,7 +32,7 @@ for post in posts:
     links.append(post["link"])
 
 subscribie_pages = requests.get(
-    "https://subscriptionwebsitebuilder.co.uk/api/v1/pages"
+    "https://subscribie.co.uk/api/v1/pages"
 )  # noqa: E501
 
 pages = subscribie_pages.json()
@@ -41,7 +41,7 @@ for page in pages:
 
 api_key = sys.argv[1]
 ghost_posts = requests.get(
-    f"https://subscriptionwebsitebuilder.co.uk/blog/ghost/api/v3/content/posts/?key={api_key}&limit=1000"  # noqa: E501
+    f"https://subscribie.co.uk/blog/ghost/api/v3/content/posts/?key={api_key}&limit=1000"  # noqa: E501
 )
 posts = ghost_posts.json()["posts"]
 for post in posts:
